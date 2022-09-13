@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7B0363F-ECB7-4ABD-98B8-1847A08323B3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Storage</RootNamespace>
+    <AssemblyName>Storage</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Company.cs" />
+    <Compile Include="Classes\DbAccess.cs" />
+    <Compile Include="Classes\DBSQL.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\MSG.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderDetails.cs" />
+    <Compile Include="Classes\PDF.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\Supp.cs" />
+    <Compile Include="Classes\Supplier.cs" />
+    <Compile Include="Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Actions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Actions.Designer.cs">
+      <DependentUpon>Actions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\AllOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\AllOrders.Designer.cs">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Statics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Statics.Designer.cs">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UcMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UcMessage.Designer.cs">
+      <DependentUpon>UcMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UCOrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UCOrderDetails.Designer.cs">
+      <DependentUpon>UCOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UCEmployeeManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UCEmployeeManagement.Designer.cs">
+      <DependentUpon>UCEmployeeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UCProductManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UCProductManagement.Designer.cs">
+      <DependentUpon>UCProductManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UCSupplierManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UCSupplierManagement.Designer.cs">
+      <DependentUpon>UCSupplierManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC%27s\UpdateOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC%27s\UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateQtyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateQtyDialog.Designer.cs">
+      <DependentUpon>UpdateQtyDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Actions.resx">
+      <DependentUpon>Actions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\AllOrders.resx">
+      <DependentUpon>AllOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Statics.resx">
+      <DependentUpon>Statics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UcMessage.resx">
+      <DependentUpon>UcMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UCOrderDetails.resx">
+      <DependentUpon>UCOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UCEmployeeManagement.resx">
+      <DependentUpon>UCEmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UCProductManagement.resx">
+      <DependentUpon>UCProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UCSupplierManagement.resx">
+      <DependentUpon>UCSupplierManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC%27s\UpdateOrder.resx">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateQtyDialog.resx">
+      <DependentUpon>UpdateQtyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Storage.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
